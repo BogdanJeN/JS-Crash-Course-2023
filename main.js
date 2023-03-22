@@ -1,8 +1,9 @@
+/*
 // Subject Data Types.Operators
 // Task 1
 // Request user’s data and show the results by using prompt() and alert() dialogs.
 
-    // question 1
+    // question 1 ------------------------------- 
 // 1. Request the birth year from the user and show his age. Use a constant in this code.
 
 
@@ -12,7 +13,7 @@ let age = CURRENT_YEAR - birthYear; // calculate the user's age
 console.log("You are " + age + " years old."); // display the result in the console
 
 
-    // question 2
+    // question 2 ------------------------------- 
 // 2. Ask the user for the radius of a circle and display its area.
 
 
@@ -21,7 +22,7 @@ let area = Math.PI * radius ** 2;
 console.log("The area of the circle is: " + area);
 
 
-    // qustion 3
+    // qustion 3 ------------------------------- 
 // 3. Ask the user for the distance in km between two cities and the amount of time they have to reach their destination. Calculate the speed they need to travel to arrive on time.
 
 
@@ -31,7 +32,7 @@ let speed = distance / time;
 console.log("You need to travel at a speed of " + speed + " km/hour to arrive on time.");
 
 
-    // qustion 4
+    // qustion 4 ------------------------------- 
 // Implement a currency converter. The user inputs dollars and the program converts it to euros. Store the currency rate in a constant.
 
 
@@ -47,7 +48,7 @@ function convertCurrency() {
 convertCurrency();
 
 
-    // qustion 5
+    // qustion 5 ------------------------------- 
 // *The user enters the capacity of a flash drive in GB. The program should calculate how many files of size 820 MB can be saved on the flash drive.
     
 
@@ -61,4 +62,49 @@ function calculateFilesOnFlashDrive() {
 }
 
 calculateFilesOnFlashDrive();
+*/
 
+// quastion 1 ------------------------------- 
+// Implement the kilometers to miles unit converter. The user inputs a value in km, and then the app displays this value in miles (1 km = 0,621371 miles). Use a constant here.
+
+const KM_TO_MILES = 0.621371; // conversion factor
+
+// ask user for input
+const kmInput = prompt("Enter a distance in kilometers:");
+
+// convert input to miles
+const milesOutput = kmInput * KM_TO_MILES;
+
+// display result to user
+alert(`${kmInput} kilometers is equal to ${milesOutput} miles.`);
+
+// qustion 2 -------------------------------
+// Ask the user for the current time (hours, minutes). Calculate how many hours and minutes are left until the end of the day. 
+
+// Ask the user for the current time
+const currentHours = parseInt(prompt("Please enter the current hours (0-23):"));
+const currentMinutes = parseInt(prompt("Please enter the current minutes (0-59):"));
+
+// Calculate the time left until the end of the day
+const hoursLeft = 23 - currentHours;
+const minutesLeft = 59 - currentMinutes;
+
+// Output the result to the console
+console.log(`There are ${hoursLeft} hours and ${minutesLeft} minutes left until the end of the day.`);
+
+// qustion 3 -------------------------------
+// Ask the user for the 3-digit number and display it backwards. Try to use the % (division remainder) operator.
+ 
+// Ask the user for a 3-digit number
+const number = parseInt(prompt("Please enter a 3-digit number:"));
+
+// Extract the digits using the % operator
+const digit1 = number % 10;
+const digit2 = Math.floor((number % 100) / 10);
+const digit3 = Math.floor(number / 100);
+
+// Concatenate the digits in reverse order
+const reversedNumber = digit1.toString() + digit2.toString() + digit3.toString();
+
+// Output the result to the console
+console.log(`The number ${number} backwards is ${reversedNumber}.`);
